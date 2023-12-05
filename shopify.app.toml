@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "upload-file"
+client_id = "838e829aab1e9392358521a668cf5ca0"
+application_url = "https://am-filing-nm-newsletters.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_files, write_themes"
+
+[auth]
+redirect_urls = [
+  "https://am-filing-nm-newsletters.trycloudflare.com/auth/callback",
+  "https://am-filing-nm-newsletters.trycloudflare.com/auth/shopify/callback",
+  "https://am-filing-nm-newsletters.trycloudflare.com/api/auth/callback",
+  "https://am-filing-nm-newsletters.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "ag-ins-test-store.myshopify.com"
